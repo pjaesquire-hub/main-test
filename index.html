@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pepe Main Test</title>
-     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -14,9 +17,15 @@
         </div>
     </div>
 
-    <img src="images/minions GIF.gif" class="gif-bottom"> 
-    
+    <img src="images/minions GIF.gif" class="gif-bottom" id="minion-gif" data-duration="750">
+    <div id="dark-overlay"></div>
+    <div id="modal-box">
+        <h1 id="modal-title">URL Shortener</h1>
+        <input type="text" id="url-input" placeholder="Paste your URL here...">
+        <button id="shorten-btn">Shorten URL</button>
+    </div>
 
+<script src="script.js"></script>
 
 <script>
 window.sprChatSettings = {"appId":"65bf9a893250ee22c20e8ee3_app_300181747","skin":"MODERN"};

@@ -55,3 +55,96 @@ body {
 @keyframes show-gif {
     to { opacity: 1; }
 }
+
+#dark-overlay {
+    position: fixed;
+    inset: 0;
+    background: #0f0e1b;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 10;
+}
+
+#dark-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: #1d1c41;
+    border: 2px solid #ff69b4;
+    box-shadow: 0 0 15px 4px rgba(255, 105, 180, 0.6), 0 0 40px 8px rgba(255, 105, 180, 0.2);
+    border-radius: 8px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease, width 0.6s ease;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#modal-box.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modal-box.shrunk {
+    width: 100px;
+    padding: 0;
+}
+
+#modal-title {
+    color: white;
+    margin: 0;
+    font-size: clamp(0.4rem, 2.5vw, 1.4rem);
+    white-space: normal;
+    text-align: center;
+    word-break: break-word;
+    width: 100%;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+#url-input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ff69b4;
+    background: #12113a;
+    color: white;
+    font-size: clamp(0.4rem, 1.5vw, 1rem);
+    text-align: center;
+    outline: none;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+#shorten-btn {
+    padding: 10px 24px;
+    background: #ff69b4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: clamp(0.4rem, 1.5vw, 1rem);
+    cursor: pointer;
+    white-space: normal;
+    word-break: break-word;
+    width: 80%;
+    box-sizing: border-box;
+}
+
+#shorten-btn:hover {
+    background: #ff4da6;
+}
