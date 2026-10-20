@@ -13,6 +13,7 @@
         setTimeout(function() {
             box.classList.add('active');
             document.getElementById('shorten-btn').addEventListener('click', function() {
+                if (document.getElementById('url-input').value.trim() === '') return;
                 box.classList.toggle('shrunk');
             });
         }, 300);
